@@ -18,3 +18,15 @@ form.addEventListener("submit", function(){
         alert("Please submit correct Email or Password")
     }
 })
+
+function loginData(){
+    fetch(`&{baseUrl}/user`)
+    .then((res)=>res.json())
+    .then((data)=>{
+        displayData(data);
+    }).catch((err)=>{
+        alert("something went wrong");
+        console.log(err);
+    })
+    
+}
